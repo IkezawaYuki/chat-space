@@ -1,0 +1,56 @@
+.wrapper
+  = render 'side'
+  .mainBody
+    .bodyheader
+      .threadTitle
+        %p sample
+        %ul.members
+          Member:
+          %li ike
+          %li zawa
+      .edit_bottom
+        %a{:href => "#"} Edit
+    .contents
+      .post
+        .head
+          %p.user_name yikezawa
+          %p.date 2019/05/11(Sat) 19:00:38
+        %p.messageText こんにちは
+      .post
+        .head
+          %p.user_name zawaike
+          %p.date 2019/05/12(Sat) 19:33:38
+        %p.messageText こんばんわ
+      .post
+        .head
+          %p.user_name zawaike
+          %p.date 2019/05/12(Sat) 19:33:38
+        %p.messageText こんばんわ
+      .post
+        .head
+          %p.user_name zawaike
+          %p.date 2019/05/12(Sat) 19:33:38
+        %p.messageText こんばんわ
+      .post
+        .head
+          %p.user_name zawaike
+          %p.date 2019/05/12(Sat) 19:33:38
+        %p.messageText こんばんわ
+      .post
+        .head
+          %p.user_name zawaike
+          %p.date 2019/05/12(Sat) 19:33:38
+        %p.messageText こんばんわ
+    
+
+    
+    .form
+      %form.newMessage{:method => "post"}
+        %input{:type => "hidden"}
+        %input{:type => "hidden"}
+        .inputBox
+          %input.input_box_text{:placeholder => "type a message"}
+          %label.image_label
+            %i{:class => "fa fa-image"}
+            %input.image_label_input{:type => "file"}
+        %input.new_submit_btn{:type => "submit", :value => "Send"}
