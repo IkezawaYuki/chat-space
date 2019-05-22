@@ -7,7 +7,7 @@ html, body {
     .wrapper{
         height:100%;
         #sideBar{
-            color:#FFFFFF;
+            color:$side_font_color;
             width:300px;
             background-color: #253141;
             height:100%;
@@ -33,17 +33,16 @@ html, body {
                     }
                 }
             }
-
             
             .titles{
                 a{
-                    color:#FFFFFF;
+                    color:$side_font_color;
                     text-decoration: none;
                 }
                 
                 width:100%;
                 height:calc(100% - 100px);
-                color: #FFFFFF;
+                color: $side_font_color;
                 background-color:#2F3e51;
 
                 .title{
@@ -156,8 +155,8 @@ html, body {
                         width: 100%;
                         .input_box_text{
                             height: 50px;
-                            width: 92%;
-                            padding: 0 40px 0 10px;
+                            width: 100%;
+                            padding-left:5px;
                             color: #434a54;
                             border-style: none;
                         }
@@ -167,6 +166,13 @@ html, body {
                             top: 10px;
                             right: 10px;
                             cursor: pointer;
+                            .fa{
+                                display: inline-block;
+                                font: normal normal normal 14px/1 FontAwesome;
+                                font-size: inherit;
+                                text-rendering: auto;
+                                -webkit-font-smoothing: antialiased;
+                            }
                             .image_label_input{
                                 display: none;
                             }
