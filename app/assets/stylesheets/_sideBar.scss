@@ -1,0 +1,56 @@
+
+
+#sideBar{
+  color:$side_font_color;
+  width:300px;
+  background-color: #253141;
+  height:100%;
+  float: left;
+  
+
+  .user_info{
+      line-height: 100px;
+      height: 100px;
+          
+      p{
+          float: left;
+          font-weight: bold;
+          padding-left:20px;
+      }
+      .user_menu{
+          float: right;
+          padding-right: 20px;
+          &__list{
+              display: inline;
+          }
+      }
+  }
+
+  
+  .titles{
+
+      width:100%;
+      height:calc(100% - 100px);
+      color: $side_font_color;
+      background-color:#2F3e51;
+
+      &__block{
+          color:$side_font_color;
+          text-decoration: none;
+          display: block;
+          height:100px;
+          padding-left:20px;
+          padding-right: 20px;
+
+          &__group_name{
+              padding-top:20px;
+              font-size:15px;
+              font-weight: bold;
+          }
+          &__latest_post{
+              font-size:11px;
+              padding-top:5px;
+          }
+      }
+  }
+}

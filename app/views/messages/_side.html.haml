@@ -1,0 +1,20 @@
+#sideBar
+  .side_header
+    .user_info
+      %p.user_name yikezawa
+      %ul.user_menu
+        %li.user_menu__list 
+          %a 
+            %i.fa.fa-edit
+        %li.user_menu__list
+          %a
+            %i.fa.fa-cog
+  .titles
+    = link_to "#",{class: "titles__block"} do
+      %div
+        %p.titles__block__group_name ikezawa group
+        %p.titles__block__latest_post hello world
+    = link_to "#",{class: "titles__block"} do
+      %div
+        %p.titles__block__group_name zawazawa group
+        %p.titles__block__latest_post konchiha
