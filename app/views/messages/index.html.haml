@@ -9,7 +9,7 @@
           %li ike
           %li zawa
       .edit_bottom
-        %a{:href => "#"} Edit
+        = link_to "Edit", "#"
     .contents
       .post
         .head
@@ -45,12 +45,12 @@
 
     
     .form
-      %form.newMessage{:method => "post"}
-        %input{:type => "hidden"}
-        %input{:type => "hidden"}
+      %form.newMessage{method:  "post"}
+        %input{type: "hidden"}
+        %input{type: "hidden"}
         .inputBox
-          %input.input_box_text{:placeholder => "type a message"}
+          %input.input_box_text{placeholder: "type a message"}
           %label.image_label
-            %i{:class => "fa fa-image"}
-            %input.image_label_input{:type => "file"}
-        %input.new_submit_btn{:type => "submit", :value => "Send"}
+            %i.fa.fa-image
+            %input.image_label_input{type: "file"}
+        %input.new_submit_btn{type: "submit", value: "Send"}
