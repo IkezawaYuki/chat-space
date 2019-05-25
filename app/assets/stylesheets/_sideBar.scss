@@ -7,65 +7,47 @@
   height:100%;
   float: left;
   
-  .side_header{
-      .user_info{
-          line-height: 100px;
-          height: 100px;
-          
-          p{
-              float: left;
-              font-weight: bold;
-              padding-left:20px;
-          
-          }
-          ul{
-              float: right;
-              padding-right: 20px;
-              li{
-                  display: inline;
-              }
-          }
-      }
-  }
-  
-  .titles{
-      a{
-          color:$side_font_color;
-          text-decoration: none;
-      }
-      
-      width:100%;
-      height:calc(100% - 100px);
-      color: $side_font_color;
-      background-color:#2F3e51;
 
-      .title{
-          display: block;
-          height:100px;
-          padding-left:20px;
-          padding-right: 20px;
-          .user_info{
-          line-height: 100px;
-          height: 100px;
+  .user_info{
+      line-height: 100px;
+      height: 100px;
+          
       p{
           float: left;
           font-weight: bold;
-          
+          padding-left:20px;
       }
-      ul{
+      .user_menu{
           float: right;
-          li{
+          padding-right: 20px;
+          &__list{
               display: inline;
           }
       }
   }
 
-          .group_name{
+  
+  .titles{
+
+      width:100%;
+      height:calc(100% - 100px);
+      color: $side_font_color;
+      background-color:#2F3e51;
+
+      &__block{
+          color:$side_font_color;
+          text-decoration: none;
+          display: block;
+          height:100px;
+          padding-left:20px;
+          padding-right: 20px;
+
+          &__group_name{
               padding-top:20px;
               font-size:15px;
               font-weight: bold;
           }
-          .latest_post{
+          &__latest_post{
               font-size:11px;
               padding-top:5px;
           }

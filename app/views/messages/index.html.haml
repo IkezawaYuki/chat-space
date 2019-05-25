@@ -6,41 +6,41 @@
         %p sample
         %ul.members
           Member:
-          %li ike
-          %li zawa
+          %li.members__list ike
+          %li.members__list zawa
       .edit_bottom
         = link_to "Edit", "#"
     .contents
-      .post
-        .head
+      .contents__post
+        .contents__post__head
           %p.user_name yikezawa
           %p.date 2019/05/11(Sat) 19:00:38
-        %p.messageText こんにちは
-      .post
-        .head
+        %p.contents__post__text こんにちは
+      .contents__post
+        .contents__post__head
           %p.user_name zawaike
           %p.date 2019/05/12(Sat) 19:33:38
-        %p.messageText こんばんわ
-      .post
-        .head
+        %p.contents__post__text こんばんわ
+      .contents__post
+        .contents__post__head
           %p.user_name zawaike
           %p.date 2019/05/12(Sat) 19:33:38
-        %p.messageText こんばんわ
-      .post
-        .head
+        %p.contents__post__text こんばんわ
+      .contents__post  
+        .contents__post__head
           %p.user_name zawaike
           %p.date 2019/05/12(Sat) 19:33:38
-        %p.messageText こんばんわ
-      .post
-        .head
+        %p.contents__post__text こんばんわ
+      .contents__post
+        .contents__post__head
           %p.user_name zawaike
           %p.date 2019/05/12(Sat) 19:33:38
-        %p.messageText こんばんわ
-      .post
-        .head
+        %p.contents__post__text こんばんわ
+      .contents__post
+        .contents__post__head
           %p.user_name zawaike
           %p.date 2019/05/12(Sat) 19:33:38
-        %p.messageText こんばんわ
+        %p.contents__post__text こんばんわ
     
 
     
@@ -49,8 +49,8 @@
         %input{type: "hidden"}
         %input{type: "hidden"}
         .inputBox
-          %input.input_box_text{placeholder: "type a message"}
-          %label.image_label
+          %input.inputBox__text{placeholder: "type a message"}
+          %label.inputBox__label
             %i.fa.fa-image
-            %input.image_label_input{type: "file"}
+            %input.inputBox__label__input{type: "file"}
         %input.new_submit_btn{type: "submit", value: "Send"}
