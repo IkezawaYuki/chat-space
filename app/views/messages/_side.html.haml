@@ -1,14 +1,16 @@
 #sideBar
   .side_header
     .user_info
-      %p.user_name yikezawa
+      %p.user_name
+        = current_user.name
       %ul.user_menu
         %li.user_menu__list 
           %a 
             %i.fa.fa-edit
         %li.user_menu__list
-          %a
-            %i.fa.fa-cog
+          = link_to edit_user_path(current_user) do
+            = fa_icon "cog", class: "icon"
+
   .titles
     = link_to "#",{class: "titles__block"} do
       %div
