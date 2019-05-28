@@ -13,7 +13,7 @@
 
 
 
-## membersテーブル
+## group_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
