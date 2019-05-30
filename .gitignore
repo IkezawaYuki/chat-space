@@ -16,3 +16,7 @@
 # Ignore Byebug command history file.
 .byebug_history
 public/uploads/*
+app/views/.DS_Store
+app/views/devise/.DS_Store
+config/.DS_Store
+.DS_Store

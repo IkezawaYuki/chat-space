@@ -38,7 +38,7 @@
           color:$side_font_color;
           text-decoration: none;
           display: block;
-          height:100px;
+          
           padding-left:20px;
           padding-right: 20px;
 
@@ -46,10 +46,12 @@
               padding-top:20px;
               font-size:15px;
               font-weight: bold;
+              height:50px;
           }
           &__latest_post{
               font-size:11px;
               padding-top:5px;
+              height:50px;
           }
       }
   }
