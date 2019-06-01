@@ -11,46 +11,14 @@
       .edit_bottom
         = link_to "Edit", "#"
     .contents
-      .contents__post
-        .contents__post__head
-          %p.user_name yikezawa
-          %p.date 2019/05/11(Sat) 19:00:38
-        %p.contents__post__text こんにちは
-      .contents__post
-        .contents__post__head
-          %p.user_name zawaike
-          %p.date 2019/05/12(Sat) 19:33:38
-        %p.contents__post__text こんばんわ
-      .contents__post
-        .contents__post__head
-          %p.user_name zawaike
-          %p.date 2019/05/12(Sat) 19:33:38
-        %p.contents__post__text こんばんわ
-      .contents__post  
-        .contents__post__head
-          %p.user_name zawaike
-          %p.date 2019/05/12(Sat) 19:33:38
-        %p.contents__post__text こんばんわ
-      .contents__post
-        .contents__post__head
-          %p.user_name zawaike
-          %p.date 2019/05/12(Sat) 19:33:38
-        %p.contents__post__text こんばんわ
-      .contents__post
-        .contents__post__head
-          %p.user_name zawaike
-          %p.date 2019/05/12(Sat) 19:33:38
-        %p.contents__post__text こんばんわ
-    
+      = render partial: "message", collection: @messages
 
-    
     .form
-      %form.newMessage{method:  "post"}
-        %input{type: "hidden"}
-        %input{type: "hidden"}
-        .inputBox
-          %input.inputBox__text{placeholder: "type a message"}
-          %label.inputBox__label
-            %i.fa.fa-image
-            %input.inputBox__label__input{type: "file"}
-        %input.new_submit_btn{type: "submit", value: "Send"}
+      = form_for [@group, @message] do |f|
+        .newMessage
+          .inputBox
+            = f.text_field :content, class: 'inputBox__text', placeholder: 'type a message'
+            = f.label :image, class: 'inputBox__label' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'inputBox__label__input'
+          = f.submit "Send", class: "new_submit_btn"
