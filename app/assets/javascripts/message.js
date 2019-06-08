@@ -1,6 +1,8 @@
 $(function(){
 
   function buildHTML(message){
+    var content_html = message.content == null ? "" : `<p class="contents__post__text">${message.content}</p>`
+    var image_html = message.image.url == null ? "" : `<img class="contents__post__image" src="${message.image.url}"></img>`
     var html = 
     `<div class="contents__post">
       <div class="contents__post__head">
@@ -11,22 +13,11 @@ $(function(){
           ${message.created_at}
         </div>
       </div>
-      `
-    if(message.content != null){
-      var content = `
-      <p class="contents__post__text">
-      ${message.content}
-      </p>
-      `
-      html = html + content;
-    }
-    if(message.image.url != null){
-      var image = `
-      <img class="contents__post__image" src="${message.image.url}"></img>
-      `
-      html = html + image;
-    }
-    return html + "</div>";
+      ${content_html}
+      ${image_html}
+    </div>
+    `
+    return html;
   }
 
   $(".new_message").on("submit", function(e){
@@ -43,8 +34,7 @@ $(function(){
     }).done(function(data){
       var html = buildHTML(data);
       $(".contents").append(html);
-      $(".inputBox__text").val("");
-      $(".inputBox__label__input").val("");
+      $(".new_message")[0].reset();
       $('.contents').animate({scrollTop: $('.contents')[0].scrollHeight});
     }).fail(function(){
       alert("通信でエラーが発生しました。");
