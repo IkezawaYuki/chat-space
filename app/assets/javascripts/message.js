@@ -33,7 +33,6 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var href = window.location.href;
-    console.log(href);
     $.ajax({
       url: href,
       type: "POST",
