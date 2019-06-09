@@ -33,7 +33,8 @@
       height:calc(100% - 100px);
       color: $side_font_color;
       background-color:#2F3e51;
-
+      
+      overflow: scroll;
       &__block{
           color:$side_font_color;
           text-decoration: none;
