@@ -3,13 +3,16 @@
   .mainBody
     .bodyheader
       .threadTitle
-        %p sample
+        %p 
+          = @group.name
         %ul.members
           Member:
-          %li.members__list ike
-          %li.members__list zawa
+          - @group.users .each do |user|
+            %li.members__list
+              = user.name
+
       .edit_bottom
-        = link_to "Edit", "#"
+        = link_to "Edit", edit_group_path(@group)
     .contents
       = render partial: "message", collection: @messages
 
