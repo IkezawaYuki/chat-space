@@ -20,3 +20,4 @@ app/views/.DS_Store
 app/views/devise/.DS_Store
 config/.DS_Store
 .DS_Store
+config/secrets.yml
